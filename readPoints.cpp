@@ -17,15 +17,15 @@ struct Point{
 
 struct Line{
     LineId Pid;
-    PointId p1;
-    PointId p2;
+    PointId pnt1;
+    PointId pnt2;
 };
 
 
 // declaring the prototype functions
 void readPoints(ifstream & inPutPointFile, Point pointsArray[], const int MaxPntsSize, int & numPoints)
 {
-    ifstream inPutPointFile(".txt");
+    ifstream inPutPointFile("point.txt");
     if(!inPutPointFile.is_open()) {
         exit(EXIT_FAILURE);
     }
