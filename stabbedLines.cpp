@@ -21,21 +21,21 @@ struct Point
 
 struct Line{
     LineId Lid;
-    PointId p1;
-    PointId p2;
+    PointId pnt1;
+    PointId pnt2;
 };
 
 void getStabbedLines (const int xcoord, Line linesArray[], const int MaxLnsSize, const int NumLines, Point pointsArray[],
                        const int MaxPtsSize, Line stabbedLines[], const int MaxStbSize, int& NumOfStbLines)
 {
-    //creating a stabbed line
+    
     struct stabbedLine{
         LineId Lid;
-        Point p1;
-        Point p2;                          
+        Point pnt1;
+        Point pnt2;                          
    }
 
-   // Lines Array
+   
    int counter;
    Line arr[10];
    Line line;
@@ -46,8 +46,8 @@ void getStabbedLines (const int xcoord, Line linesArray[], const int MaxLnsSize,
 
         if (line.Lid == linesArray[i].Lid)
         {
-            line.p1.Pid = linesArray[i].p1;
-            line.p2.Pid = linesArray[i].p2;
+            line.pnt1.Pid = linesArray[i].p1;
+            line.pnt2.Pid = linesArray[i].p2;
         }
 
         arr[counter] = line;
@@ -59,32 +59,32 @@ void getStabbedLines (const int xcoord, Line linesArray[], const int MaxLnsSize,
     {
         for (int j = 0; j < MaxPtsSize; ++j)
         {
-            if (arr[i].p1.Pid == pointsArray[j].Pid)
+            if (arr[i].pnt1.Pid == pointsArray[j].Pid)
             {
-                arr[i].p1.x = pointsArray[j].x;
-                arr[i].p1.y = pointsArray[j].y;
+                arr[i].pnt1.x = pointsArray[j].x;
+                arr[i].ptn1.y = pointsArray[j].y;
             }
-            if (arr[i].p2.Pid == pointsArray[j].Pid)
+            if (arr[i].pnt2.Pid == pointsArray[j].Pid)
             {
-                arr[i].p2.x = pointsArray[j].x;
-                arr[i].p2.y = pointsArray[j].y;
+                arr[i].pnt2.x = pointsArray[j].x;
+                arr[i].pnt2.y = pointsArray[j].y;
             }
         }
         cout << "LineID" << " " << endl;
         cout << StabbedLines[y].Lid << endl;
         cout << endl;
-        cout  << "Point one: "  << endl;
-        cout << "(" << arr[i].p1.x << "," << arr[i].p1.y << ")" << endl;
+        cout  << "First Point: "  << endl;
+        cout << "(" << arr[i].pnt1.x << "," << arr[i].pnt1.y << ")" << endl;
         cout << endl;
-        cout << "(Point two: )" << endl;
-        cout << "(" << arr[i].p2.x << "," << arr[i].p2.y << ")" << endl;
+        cout << "(Second Point: )" << endl;
+        cout << "(" << arr[i].pnt2.x << "," << arr[i].pnt2.y << ")" << endl;
     }
     
     cout << " The lines stabbed by x are: " << " " << xcoord << endl;
 
     for (int i = 0; i < NumLines; ++i)
     {
-        if (arr[i].p1.x >= xcoord || arr[i].p2.x >= xcoord)
+        if (arr[i].pnt1.x >= xcoord || arr[i].pnt2.x >= xcoord)
         {
             cout << "Line" << "   " << arr[i].Lid << endl;
         }
