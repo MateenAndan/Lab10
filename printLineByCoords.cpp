@@ -65,8 +65,8 @@ void printLineByCoords(LineId lid, Line LinesArray[], const int MaxLnsSize, Poin
     cout << "LineID" << " " << endl;
     cout << counter.Lid << endl;
     cout << endl;
-    cout << "Point one: " << endl;
+    cout << "First point: " << endl;
     cout << "(" << pnt1.x << "," << pnt1.y << ")" << endl; cout << endl;
-    cout <<  "Point two: " << endl;
+    cout <<  "Second point: " << endl;
     cout << "(" << pnt2.x << "," << pnt2.y << ")" << endl;
 }
