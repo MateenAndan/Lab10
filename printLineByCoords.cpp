@@ -20,8 +20,8 @@ struct Point
 struct Line
 {              
     LineId Lid; 
-    PointId p1; 
-    PointId p2;
+    PointId pnt1; 
+    PointId pnt2;
 };
 
 void printLineByCoords(LineId lid, Line LinesArray[], const int MaxLnsSize, Point pointsArray[], const int MaxPntsSize)
@@ -35,35 +35,35 @@ void printLineByCoords(LineId lid, Line LinesArray[], const int MaxLnsSize, Poin
     for (int i = 0; i < MaxLnsSize; ++i)
     {
 
-        cout << LinesArray[i].Lid << " " << LinesArray[i].p1 << " " << LinesArray[i].p2 << endl;
+        cout << LinesArray[i].Lid << " " << LinesArray[i].pnt1 << " " << LinesArray[i].pnt2 << endl;
     }
     Line counter;
-    Point p1;
-    Point p2;
+    Point pnt1;
+    Point pnt2;
     counter.Lid = lid;
     for (int i = 0; i < 5; ++i)
     {
 
         if (counter.Lid == LinesArray[i].Lid)
         {
-            p1.Pid = LinesArray[i].p1;
+            pnt1.Pid = LinesArray[i].pnt1;
         }
         if (counter.Lid == LinesArray[i].Lid)
         {
-            p2.Pid = LinesArray[i].p2;
+            pnt2.Pid = LinesArray[i].pnt2;
         }
     }
     for (int i = 0; i < 8; ++i)
     {
-        if (p1.Pid == pointsArray[i].Pid)
+        if (pnt1.Pid == pointsArray[i].Pid)
         {
-            p1.x = pointsArray[i].x;
-            p1.y = pointsArray[i].y;
+            pnt1.x = pointsArray[i].x;
+            pnt1.y = pointsArray[i].y;
         }
-        if (p2.Pid == pointsArray[i].Pid)
+        if (pnt2.Pid == pointsArray[i].Pid)
         {
-            p2.x = pointsArray[i].x;
-            p2.y = pointsArray[i].y;
+            pnt2.x = pointsArray[i].x;
+            pnt2.y = pointsArray[i].y;
         }
     }
 
@@ -71,7 +71,7 @@ void printLineByCoords(LineId lid, Line LinesArray[], const int MaxLnsSize, Poin
     cout << counter.Lid << endl;
     cout << endl;
     cout << "Point one: " << endl;
-    cout << "(" << p1.x << "," << p1.y << ")" << endl; cout << endl;
+    cout << "(" << pnt1.x << "," << pnt1.y << ")" << endl; cout << endl;
     cout <<  "Point two: " << endl;
-    cout << "(" << p2.x << "," << p2.y << ")" << endl;
+    cout << "(" << pnt2.x << "," << pnt2.y << ")" << endl;
 }
