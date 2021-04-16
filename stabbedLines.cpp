@@ -80,7 +80,7 @@ void getStabbedLines (const int xcoord, Line linesArray[], const int MaxLnsSize,
         cout << "(" << arr[i].pnt2.x << "," << arr[i].pnt2.y << ")" << endl;
     }
     
-    cout << " The lines stabbed by x are: " << " " << xcoord << endl;
+    cout << "Number of stabbed lines: " << " " << xcoord << endl;
 
     for (int i = 0; i < NumLines; ++i)
     {
