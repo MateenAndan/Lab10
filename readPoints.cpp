@@ -21,8 +21,6 @@ struct Line{
     PointId pnt2;
 };
 
-
-// declaring the prototype functions
 void readPoints(ifstream & inPutPointFile, Point pointsArray[], const int MaxPntsSize, int & numPoints)
 {
     ifstream inPutPointFile("point.txt");
@@ -34,11 +32,10 @@ void readPoints(ifstream & inPutPointFile, Point pointsArray[], const int MaxPnt
     int y;
     int count;
     int counter;
-    char comma;
     PointId pid;
     pointsArray[MaxPntsSize];
 
-    while(inPutPointFile >> pid >> comma >> x >> comma >> y){
+    while(inPutPointFile >> pid >> x >> y){
         Point count;
         int count = 0;
         count.x = x;
@@ -48,11 +45,7 @@ void readPoints(ifstream & inPutPointFile, Point pointsArray[], const int MaxPnt
         pointsArray[counter] = count;
         ++counter;
     }
-    cout << "PointID"
-         << " "
-         << "X-value"
-         << " "
-         << "Y-Value" << endl;
+    cout << "PointID" << " " << "x:" << " " << "y:" << endl;
     for (int i = 0; i < 8; ++i)
     {
 
