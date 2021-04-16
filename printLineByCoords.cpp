@@ -26,12 +26,7 @@ struct Line
 
 void printLineByCoords(LineId lid, Line LinesArray[], const int MaxLnsSize, Point pointsArray[], const int MaxPntsSize)
 {
-    cout << "LineID"
-         << " "
-         << "FirstPoint"
-         << " "
-         << "SecondPoint" 
-         << endl;
+    cout << "LineID" << " << "FirstPoint" << " " << "SecondPoint"   << endl;
     for (int i = 0; i < MaxLnsSize; ++i)
     {
 
